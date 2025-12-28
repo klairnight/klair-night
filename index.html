@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>KLΛIR NIGHT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- COLORES -->
+<style>
+:root{
+  --bordeaux:#5a0f1b;
+  --blanco:#ffffff;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--blanco);
+  color:#000;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 25px;
+  border-bottom:2px solid var(--bordeaux);
+}
+
+.logo-mini{
+  font-weight:bold;
+  font-size:22px;
+  color:var(--bordeaux);
+}
+
+nav a{
+  margin:0 10px;
+  text-decoration:none;
+  color:#000;
+  font-weight:500;
+}
+
+.cart{
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  background:url("banner.jpg") center/cover no-repeat;
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
+
+.hero div{
+  background:rgba(0,0,0,0.4);
+  padding:30px;
+}
+
+.hero h1{
+  font-size:36px;
+  letter-spacing:3px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:var(--bordeaux);
+  color:white;
+  text-decoration:none;
+}
+
+/* SECCIONES */
+section{
+  padding:40px 20px;
+}
+
+h2{
+  text-align:center;
+  color:var(--bordeaux);
+}
+
+/* PRODUCTOS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.card{
+  border:1px solid #ddd;
+  padding:15px;
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.price{
+  font-weight:bold;
+  margin:10px 0;
+}
+
+/* COLORES */
+.colors span{
+  display:inline-block;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  margin:5px;
+  cursor:pointer;
+  border:1px solid #000;
+}
+
+.white{background:#fff;}
+.black{background:#000;}
+.red{background:var(--bordeaux);}
+
+/* FAQ */
+.faq{
+  max-width:700px;
+  margin:auto;
+}
+
+.faq details{
+  margin-bottom:10px;
+  border-bottom:1px solid #ccc;
+  padding:10px 0;
+}
+
+/* CONTACTO */
+.contact-icons{
+  text-align:center;
+}
+
+.contact-icons a{
+  margin:0 10px;
+  font-size:22px;
+  text-decoration:none;
+  color:var(--bordeaux);
+}
+
+/* FOOTER */
+footer{
+  background:var(--bordeaux);
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-mini">KN</div>
+
+  <!-- LOGO PRINCIPAL -->
+  <!-- Reemplazá logo.png por tu logo -->
+  <img src="logo.png" alt="Klair Night" height="40">
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#ayuda">Ayuda</a>
+    <a href="#contacto">Contacto</a>
+    <span class="cart">🛒 0</span>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div>
+    <h1>KLΛIR NIGHT</h1>
+    <p>Brillá de noche</p>
+    <a href="#tienda" class="btn">Ver tienda</a>
+  </div>
+</section>
+
+<!-- DESTACADOS -->
+<section>
+  <h2>Productos destacados</h2>
+  <div class="products">
+
+    <!-- PRODUCTO -->
+    <div class="card">
+      <img src="producto1.jpg">
+      <h3>Top Noir</h3>
+      <div class="price">$18.000</div>
+
+      <!-- COLORES EDITABLES -->
+      <div class="colors">
+        <span class="white"></span>
+        <span class="black"></span>
+      </div>
+
+      <button class="btn">Agregar al carrito</button>
+    </div>
+
+    <!-- Repetís esta tarjeta por producto -->
+
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda">
+  <h2>Tienda</h2>
+  <p style="text-align:center;">Tops · Shorts & Polleras · Bodys</p>
+</section>
+
+<!-- ENVIOS -->
+<section>
+  <h2>Envíos</h2>
+  <p style="text-align:center;">
+    📦 Correo Argentino<br>
+    📦 Andreani
+  </p>
+</section>
+
+<!-- AYUDA -->
+<section id="ayuda">
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq">
+
+    <!-- EDITABLE -->
+    <details>
+      <summary>¿Cómo comprar?</summary>
+      <p>Elegís tu producto, pagás por Mercado Pago y coordinamos el envío.</p>
+    </details>
+
+    <details>
+      <summary>¿Qué medios de pago aceptan?</summary>
+      <p>Transferencia por Mercado Pago.</p>
+    </details>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2>Contacto</h2>
+
+  <div class="contact-icons">
+    <a href="https://instagram.com/klair.night">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="https://wa.me/541151136240">WhatsApp</a>
+  </div>
+
+  <p style="text-align:center;">📧 klairnight@gmail.com</p>
+
+  <!-- FORMULARIO -->
+  <form style="max-width:400px;margin:auto;">
+    <input type="text" placeholder="Nombre" style="width:100%;padding:8px;"><br><br>
+    <input type="email" placeholder="Email" style="width:100%;padding:8px;"><br><br>
+    <textarea placeholder="Mensaje" style="width:100%;padding:8px;"></textarea><br><br>
+    <button class="btn">Enviar</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>KLΛIR NIGHT</strong></p>
+  <p>klairnight@gmail.com</p>
+  <p>Mercado Pago · Alias: <strong>ACA_PONES_TU_ALIAS</strong></p>
+  <p>© 2025 Klair Night</p>
+</footer>
+
+</body>
+</html>
